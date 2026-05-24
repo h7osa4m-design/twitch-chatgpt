@@ -6,6 +6,7 @@ export class OpenAIOperations {
         this.messages = [{role: "system", content: file_context}];
         this.openai = new OpenAI({
             apiKey: openai_key,
+            baseURL: "https://openrouter.ai/api/v1"
         });
         this.model_name = model_name;
         this.history_length = history_length;
